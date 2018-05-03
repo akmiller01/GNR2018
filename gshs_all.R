@@ -68,9 +68,13 @@ for(full_link in full_links){
     gshs_nat = read.spss(unzipped, use.value.labels = F)
     gshs_nat = data.frame(gshs_nat)
     names(gshs_nat) = toupper(names(gshs_nat))
-    standard.names = subset(standard.names, non.standard %in% names(gshs_nat))
-    gshs_nat = gshs_nat[standard.names$non.standard]
-    names(gshs_nat) = standard.names$standard
+    if(sum(!standard.names$standard %in% names(gshs_nat))>0){
+      #Not already standardized
+      message("Standardizing!")
+      standard.names = subset(standard.names, non.standard %in% names(gshs_nat))
+      gshs_nat = gshs_nat[standard.names$non.standard]
+      names(gshs_nat) = standard.names$standard 
+    }
     gshs_nat$country = country_name
     gshs_nat$year = year
     gshs_nat$filename = file_base
