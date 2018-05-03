@@ -15,6 +15,7 @@ base_link = "http://www.who.int"
 datasets_page_source = scrape("http://www.who.int/ncds/surveillance/gshs/datasets/en/",headers=T,follow=T,parse=T)[[1]]
 link_elems = getNodeSet(datasets_page_source,"//ul[@class='list_dash']/li/a")
 link_suffixes = sapply(link_elems,xmlGetAttr,"href")
+link_suffixes = unique(c(link_suffixes,"/ncds/surveillance/gshs/myanmardataset/en/","/ncds/surveillance/gshs/bahamasdataset/en/"))
 
 data.list = list()
 var.lab.list = list()

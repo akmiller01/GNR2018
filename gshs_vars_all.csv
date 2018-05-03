@@ -2481,132 +2481,6 @@ qnc2g,"Among those worried, currently bullied",barbados,2011,BBH2011_Public_Use.
 weight,Weight,barbados,2011,BBH2011_Public_Use.sav
 stratum,Stratum,barbados,2011,BBH2011_Public_Use.sav
 psu,Primary Sampling Unit,barbados,2011,BBH2011_Public_Use.sav
-Q1,How old are you,barbados,2011,BBH2011_Public_Use.sav
-Q2,Sex,barbados,2011,BBH2011_Public_Use.sav
-Q3,In what grade are you,barbados,2011,BBH2011_Public_Use.sav
-Q4,How tall are you,barbados,2011,BBH2011_Public_Use.sav
-Q5,How much do you weigh,barbados,2011,BBH2011_Public_Use.sav
-Q6,Went hungry past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q7,Eat fruit per day past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q8,Eat vegetables past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q9,Drink soft drinks past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q10,Ate fast food past 7 days,barbados,2011,BBH2011_Public_Use.sav
-Q11,How many times per day brush teeth,barbados,2011,BBH2011_Public_Use.sav
-Q12,Wash hands before eating past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q13,Wash hands after toilet past 30 day,barbados,2011,BBH2011_Public_Use.sav
-Q14,Used soap on hands past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q15,Times attacked past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q16,How many times in fight 12 mos,barbados,2011,BBH2011_Public_Use.sav
-Q17,How many times injured past 12 months,barbados,2011,BBH2011_Public_Use.sav
-Q18,What was serious injury past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q19,Cause of injury past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q20,How many days bullied past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q21,How bullied past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q22,Times felt lonely past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q23,Times could not sleep past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q24,Ever considered suicide 12 mos,barbados,2011,BBH2011_Public_Use.sav
-Q25,Ever make suicide plan 12 mos,barbados,2011,BBH2011_Public_Use.sav
-Q26,Times attempted suicide 12 mos.,barbados,2011,BBH2011_Public_Use.sav
-Q27,Number close friends,barbados,2011,BBH2011_Public_Use.sav
-Q28,Age first tried cigarette,barbados,2011,BBH2011_Public_Use.sav
-Q29,How many days smoked 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q30,Other tobacco past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q31,Try stop smoking past 12 mo.,barbados,2011,BBH2011_Public_Use.sav
-Q32,Others present smoking past 7 days,barbados,2011,BBH2011_Public_Use.sav
-Q33,Parents who use tobacco,barbados,2011,BBH2011_Public_Use.sav
-Q34,Age first drink alcohol,barbados,2011,BBH2011_Public_Use.sav
-Q35,Days one drink or more past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q36,Number of drinks past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q37,How got drinks past 30 days ,barbados,2011,BBH2011_Public_Use.sav
-Q38,Times drunk during life,barbados,2011,BBH2011_Public_Use.sav
-Q39,Number of troubles as result of drinking,barbados,2011,BBH2011_Public_Use.sav
-Q40,Age first drugs,barbados,2011,BBH2011_Public_Use.sav
-Q41,Times used marijuana lifetime,barbados,2011,BBH2011_Public_Use.sav
-Q42,Times used marijuana past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q43,Times used amphetamines lifetime,barbados,2011,BBH2011_Public_Use.sav
-Q44,Ever had sex,barbados,2011,BBH2011_Public_Use.sav
-Q45,Age first sexual intercourse,barbados,2011,BBH2011_Public_Use.sav
-Q46,How many sex partners,barbados,2011,BBH2011_Public_Use.sav
-Q47,Used condom at last intercourse,barbados,2011,BBH2011_Public_Use.sav
-Q48,Used birth control last intercourse,barbados,2011,BBH2011_Public_Use.sav
-Q49,Days active 60 min plus past 7 days,barbados,2011,BBH2011_Public_Use.sav
-Q50,Walk or bike to school past 7 days,barbados,2011,BBH2011_Public_Use.sav
-Q51,Days went to PE each week,barbados,2011,BBH2011_Public_Use.sav
-Q52,Time spent sitting on usual day,barbados,2011,BBH2011_Public_Use.sav
-Q53,Miss school no permission past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q54,Others helpful in school past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q55,Parents check homework past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q56,Parent understand troubles past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q57,Parent know what you do past 30 days,barbados,2011,BBH2011_Public_Use.sav
-Q58,Parent go through things past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN6,Went hungry most of time/always past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN7,Ate fruit 2+ times per day past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN8,Ate vegetables 3+ times per day past 30 day,barbados,2011,BBH2011_Public_Use.sav
-QN9,Drank soft drinks 1+ times per day past 30 day,barbados,2011,BBH2011_Public_Use.sav
-QN10,Ate fast food 3+ days past 7 day,barbados,2011,BBH2011_Public_Use.sav
-QN11,Cleaned/brushed teeth <1 time/day past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN12,Never/rarely wash hands before eating past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN13,Never/rarely wash hands after toilet past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN14,Never/rarely use soap on hands past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN15,Attacked 1+ times past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN16,In fight 1+ times past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN17,Seriously injured 1+ times past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN18,Broken bone as most serious injury ,barbados,2011,BBH2011_Public_Use.sav
-QN19,Motor vehicle caused most serious injury ,barbados,2011,BBH2011_Public_Use.sav
-QN20,Bullied 1+ of past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN21,"Of students bullied, most often hit, kicked, etc",barbados,2011,BBH2011_Public_Use.sav
-QN22,Lonely most times/always past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN23,Worry prevented sleep most time/always past 12 mos,barbados,2011,BBH2011_Public_Use.sav
-QN24,Considered suicide past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN25,Made suicide plan past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN26,1+ times attempt suicide 12 mos.,barbados,2011,BBH2011_Public_Use.sav
-QN27,No close friends,barbados,2011,BBH2011_Public_Use.sav
-QN28,Age first cigarette before 14,barbados,2011,BBH2011_Public_Use.sav
-QN29,Smoked cigarettes 1+ of past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN30,Used other tobacco 1+ of past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN31,Tried to quit smoking past 12 months,barbados,2011,BBH2011_Public_Use.sav
-QN32,Others present smoking 1+ of past 7 days,barbados,2011,BBH2011_Public_Use.sav
-QN33,Either/Both parents use tobacco,barbados,2011,BBH2011_Public_Use.sav
-QN34,Age first alcohol before 14,barbados,2011,BBH2011_Public_Use.sav
-QN35,Drank 1+ days past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN36,"Of current drinkers, drank 2+ drinks/day 30 days",barbados,2011,BBH2011_Public_Use.sav
-QN37,"Of current drinkers, got alcohol from friends",barbados,2011,BBH2011_Public_Use.sav
-QN38,1+ times drunk in lifetime,barbados,2011,BBH2011_Public_Use.sav
-QN39,Alcohol trouble 1+ times in lifetime,barbados,2011,BBH2011_Public_Use.sav
-QN40,Age first drugs before 14,barbados,2011,BBH2011_Public_Use.sav
-QN41,Marijuana 1+ times in lifetime,barbados,2011,BBH2011_Public_Use.sav
-QN42,Marijuana 1+ times p 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN43,Amphetamines 1+ times lifetime,barbados,2011,BBH2011_Public_Use.sav
-QN44,Ever had sex,barbados,2011,BBH2011_Public_Use.sav
-QN45,Age first sexual intercourse before 14,barbados,2011,BBH2011_Public_Use.sav
-QN46,2+ sex partners lifetime,barbados,2011,BBH2011_Public_Use.sav
-QN47,Used condom at last sex,barbados,2011,BBH2011_Public_Use.sav
-QN48,Used birth control at last sex,barbados,2011,BBH2011_Public_Use.sav
-QN49,Active 60+ mins/day for 5+ of past 7 days,barbados,2011,BBH2011_Public_Use.sav
-QN50,Walk/Bike to/from school 0 of past 7 days,barbados,2011,BBH2011_Public_Use.sav
-QN51,3+ days PE each week,barbados,2011,BBH2011_Public_Use.sav
-QN52,Sitting activities 3+ hours/day of usual day,barbados,2011,BBH2011_Public_Use.sav
-QN53,Miss school no permission 1+ of past 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN54,Students most/always kind 30 days,barbados,2011,BBH2011_Public_Use.sav
-QN55,Parents most/always check homework,barbados,2011,BBH2011_Public_Use.sav
-QN56,Parents most/always understand problems,barbados,2011,BBH2011_Public_Use.sav
-QN57,Parents most/always know about free time ,barbados,2011,BBH2011_Public_Use.sav
-QN58,Parents never/rarely go thru things,barbados,2011,BBH2011_Public_Use.sav
-site,Site Code,barbados,2011,BBH2011_Public_Use.sav
-schoolid,School Identifier,barbados,2011,BBH2011_Public_Use.sav
-classid,Class Identifier,barbados,2011,BBH2011_Public_Use.sav
-qnowtg,Overweight,barbados,2011,BBH2011_Public_Use.sav
-qnobeseg,Obese,barbados,2011,BBH2011_Public_Use.sav
-qnunwtg,Underweight,barbados,2011,BBH2011_Public_Use.sav
-qnfrvgg,Ate 5+ fruits/vegetables 30 days,barbados,2011,BBH2011_Public_Use.sav
-qnanytbg,Used any tobacco past 30 days,barbados,2011,BBH2011_Public_Use.sav
-qnpa7g,Physically active all past 7 days,barbados,2011,BBH2011_Public_Use.sav
-qnpe5g,Attended PE 5+ days each week,barbados,2011,BBH2011_Public_Use.sav
-qnc1g,"Among heavy drinkers, ever sex",barbados,2011,BBH2011_Public_Use.sav
-qnc2g,"Among those worried, currently bullied",barbados,2011,BBH2011_Public_Use.sav
-weight,Weight,barbados,2011,BBH2011_Public_Use.sav
-stratum,Stratum,barbados,2011,BBH2011_Public_Use.sav
-psu,Primary Sampling Unit,barbados,2011,BBH2011_Public_Use.sav
 Q1,How old are you,belize,2011,BZH2011_Public_Use.sav
 Q2,Sex,belize,2011,BZH2011_Public_Use.sav
 Q3,In what grade are you,belize,2011,BZH2011_Public_Use.sav
@@ -5975,132 +5849,6 @@ qnwkrdg,Walked/biked <2.5 hrs 7 days,indonesia,2007,IOH2007_Public_Use.sav
 weight,Weight,indonesia,2007,IOH2007_Public_Use.sav
 psu,Primary Sampling Unit,indonesia,2007,IOH2007_Public_Use.sav
 stratum,Stratum,indonesia,2007,IOH2007_Public_Use.sav
-Q1,How old are you,maldives,2009,MVH2009_Public_Use.sav
-Q2,Sex,maldives,2009,MVH2009_Public_Use.sav
-Q3,In what grade are you,maldives,2009,MVH2009_Public_Use.sav
-Q4,How tall are you,maldives,2009,MVH2009_Public_Use.sav
-Q5,How much do you weigh,maldives,2009,MVH2009_Public_Use.sav
-Q6,Went hungry past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q7,Eat fruit per day past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q8,Eat vegetables past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q9,Drink soft drinks past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q10,Ate fast food past 7 days,maldives,2009,MVH2009_Public_Use.sav
-Q11,How many times per day brush teeth,maldives,2009,MVH2009_Public_Use.sav
-Q12,Wash hands before eating past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q13,Wash hands after toilet past 30 day,maldives,2009,MVH2009_Public_Use.sav
-Q14,Used soap on hands past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q15,Times attacked past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q16,How many times in fight 12 mos,maldives,2009,MVH2009_Public_Use.sav
-Q17,How many times injured past 12 months,maldives,2009,MVH2009_Public_Use.sav
-Q18,What was serious injury past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q19,Cause of injury past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q20,How many days bullied past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q21,How bullied past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q22,Times felt lonely past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q23,Times could not sleep past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q24,Ever considered suicide 12 mos,maldives,2009,MVH2009_Public_Use.sav
-Q25,Ever make suicide plan 12 mos,maldives,2009,MVH2009_Public_Use.sav
-Q26,Times attempted suicide 12 mos,maldives,2009,MVH2009_Public_Use.sav
-Q27,Number close friends,maldives,2009,MVH2009_Public_Use.sav
-Q28,Age first tried cigarette,maldives,2009,MVH2009_Public_Use.sav
-Q29,How many days smoked 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q30,Other forms of tobacco,maldives,2009,MVH2009_Public_Use.sav
-Q31,Try stop smoking past 12 mo.,maldives,2009,MVH2009_Public_Use.sav
-Q32,Others present smoking past 7 days,maldives,2009,MVH2009_Public_Use.sav
-Q33,Parents who use tobacco,maldives,2009,MVH2009_Public_Use.sav
-Q34,Age first drink of alcohol,maldives,2009,MVH2009_Public_Use.sav
-Q35,Days one drink or more past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q36,Number of drinks past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q37,How got drinks past 30 days ,maldives,2009,MVH2009_Public_Use.sav
-Q38,Times drunk during life,maldives,2009,MVH2009_Public_Use.sav
-Q39,Number of troubles as result of drinking,maldives,2009,MVH2009_Public_Use.sav
-Q40,Age first drugs,maldives,2009,MVH2009_Public_Use.sav
-Q41,Times used marijuana lifetime,maldives,2009,MVH2009_Public_Use.sav
-Q42,Times used marijuana past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q43,Times used amphetamines lifetime,maldives,2009,MVH2009_Public_Use.sav
-Q44,Ever had sex,maldives,2009,MVH2009_Public_Use.sav
-Q45,Age first sexual intercourse,maldives,2009,MVH2009_Public_Use.sav
-Q46,How many sex partners,maldives,2009,MVH2009_Public_Use.sav
-Q47,Used condom at last intercourse,maldives,2009,MVH2009_Public_Use.sav
-Q48,Used birth control last intercourse,maldives,2009,MVH2009_Public_Use.sav
-Q49,Days active 60 min plus past 7 days,maldives,2009,MVH2009_Public_Use.sav
-Q50,Walk or bike to school past 7 days,maldives,2009,MVH2009_Public_Use.sav
-Q51,Days went to PE each week,maldives,2009,MVH2009_Public_Use.sav
-Q52,Time spent sitting on usual day,maldives,2009,MVH2009_Public_Use.sav
-Q53,Miss school no permission past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q54,Others helpful in school past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q55,Parents check homework past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q56,Parent understand troubles past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q57,Parent know what you do past 30 days,maldives,2009,MVH2009_Public_Use.sav
-Q58,Parent go through things past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN6,Went hungry most of time/always past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN7,Ate fruit 2+ times per day past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN8,Ate vegetables 3+ times per day past 30 day,maldives,2009,MVH2009_Public_Use.sav
-QN9,Drank soft drinks 1+ times per day past 30 day,maldives,2009,MVH2009_Public_Use.sav
-QN10,Ate fast food 3+ days past 7 day,maldives,2009,MVH2009_Public_Use.sav
-QN11,Cleaned/brushed teeth <1 time/day past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN12,Never/rarely wash hands before eating past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN13,Never/rarely wash hands after toilet past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN14,Never/rarely use soap on hands past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN15,Attacked 1+ times past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN16,In fight 1+ times past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN17,Seriously injured 1+ times past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN18,Broken bone as most serious injury ,maldives,2009,MVH2009_Public_Use.sav
-QN19,Motor vehicle caused most serious injury ,maldives,2009,MVH2009_Public_Use.sav
-QN20,Bullied 1+ of past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN21,"Of students bullied, most often hit, kicked, etc",maldives,2009,MVH2009_Public_Use.sav
-QN22,Lonely most times/always past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN23,Worry prevented sleep most time/always past 12 mos,maldives,2009,MVH2009_Public_Use.sav
-QN24,Considered suicide past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN25,Made suicide plan past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN26,1+ times attempt suicide 12 mos.,maldives,2009,MVH2009_Public_Use.sav
-QN27,No close friends,maldives,2009,MVH2009_Public_Use.sav
-QN28,Age first cigarette before 14,maldives,2009,MVH2009_Public_Use.sav
-QN29,Smoked cigarettes 1+ of past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN30,Used other tobacco 1+ of past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN31,Tried to quit smoking past 12 months,maldives,2009,MVH2009_Public_Use.sav
-QN32,Others present smoking 1+ of past 7 days,maldives,2009,MVH2009_Public_Use.sav
-QN33,Either/Both parents use tobacco,maldives,2009,MVH2009_Public_Use.sav
-QN34,Age first alcohol before 14,maldives,2009,MVH2009_Public_Use.sav
-QN35,Drank 1+ days past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN36,"Of current drinkers, drank 2+ drinks/day 30 days",maldives,2009,MVH2009_Public_Use.sav
-QN37,"Of current drinkers, got alcohol from friends",maldives,2009,MVH2009_Public_Use.sav
-QN38,1+ times drunk in lifetime,maldives,2009,MVH2009_Public_Use.sav
-QN39,Alcohol trouble 1+ times in lifetime,maldives,2009,MVH2009_Public_Use.sav
-QN40,Age first drugs before 14,maldives,2009,MVH2009_Public_Use.sav
-QN41,Marijuana 1+ times in lifetime,maldives,2009,MVH2009_Public_Use.sav
-QN42,Marijuana 1+ times p 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN43,Amphetamines 1+ times lifetime,maldives,2009,MVH2009_Public_Use.sav
-QN44,Ever had sex,maldives,2009,MVH2009_Public_Use.sav
-QN45,Age first sexual intercourse before 14,maldives,2009,MVH2009_Public_Use.sav
-QN46,2+ sex partners lifetime,maldives,2009,MVH2009_Public_Use.sav
-QN47,"Among ever sex, used condoms at last sex",maldives,2009,MVH2009_Public_Use.sav
-QN48,Used birth control at last sex,maldives,2009,MVH2009_Public_Use.sav
-QN49,Active 60+ mins/day for 5+ of past 7 days,maldives,2009,MVH2009_Public_Use.sav
-QN50,Walk/Bike to/from school 0 of past 7 days,maldives,2009,MVH2009_Public_Use.sav
-QN51,3+ days PE each week,maldives,2009,MVH2009_Public_Use.sav
-QN52,Sitting activities 3+ hours/day of usual day,maldives,2009,MVH2009_Public_Use.sav
-QN53,Miss school no permission 1+ of past 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN54,Students most/always kind 30 days,maldives,2009,MVH2009_Public_Use.sav
-QN55,Parents most/always check homework,maldives,2009,MVH2009_Public_Use.sav
-QN56,Parents most/always understand problems,maldives,2009,MVH2009_Public_Use.sav
-QN57,Parents most/always know about free time ,maldives,2009,MVH2009_Public_Use.sav
-QN58,Parents never/rarely go thru things,maldives,2009,MVH2009_Public_Use.sav
-site,Site Code,maldives,2009,MVH2009_Public_Use.sav
-schoolid,School Identifier,maldives,2009,MVH2009_Public_Use.sav
-classid,Class Identifier,maldives,2009,MVH2009_Public_Use.sav
-qnowtg,Overweight,maldives,2009,MVH2009_Public_Use.sav
-qnobeseg,Obese,maldives,2009,MVH2009_Public_Use.sav
-qnunwtg,Underweight,maldives,2009,MVH2009_Public_Use.sav
-qnfrvgg,Ate 5+ fruits/vegetables 30 days,maldives,2009,MVH2009_Public_Use.sav
-qnanytbg,Used any tobacco past 30 days,maldives,2009,MVH2009_Public_Use.sav
-qnpa7g,Physically active all past 7 days,maldives,2009,MVH2009_Public_Use.sav
-qnpe5g,Attended PE 5+ days each week,maldives,2009,MVH2009_Public_Use.sav
-qnc1g,"Among heavy drinkers, ever sex",maldives,2009,MVH2009_Public_Use.sav
-qnc2g,"Among those worried, currently bullied",maldives,2009,MVH2009_Public_Use.sav
-weight,Weight,maldives,2009,MVH2009_Public_Use.sav
-stratum,Stratum,maldives,2009,MVH2009_Public_Use.sav
-psu,Primary Sampling Unit,maldives,2009,MVH2009_Public_Use.sav
 Q1,How old are you,maldives,2009,MVH2009_Public_Use.sav
 Q2,Sex,maldives,2009,MVH2009_Public_Use.sav
 Q3,In what grade are you,maldives,2009,MVH2009_Public_Use.sav
@@ -11522,3 +11270,241 @@ qnpe5g,Attended physical education classes on five or more days,wallisfutuna,201
 weight,,wallisfutuna,2015,WFH2015_Public_Use.sav
 stratum,,wallisfutuna,2015,WFH2015_Public_Use.sav
 psu,,wallisfutuna,2015,WFH2015_Public_Use.sav
+Q1,How old are you,myanmar,2007,MYH2007_public_use.sav
+Q2,Sex,myanmar,2007,MYH2007_public_use.sav
+Q3,In what grade are you,myanmar,2007,MYH2007_public_use.sav
+Q4,How tall are you,myanmar,2007,MYH2007_public_use.sav
+Q5,How much do you weigh,myanmar,2007,MYH2007_public_use.sav
+Q6,Went hungry past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q7,Eat fruit per day past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q8,Eat vegetables past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q9,How many times per day brush teeth,myanmar,2007,MYH2007_public_use.sav
+Q10,Wash hands before eating past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q11,Wash hands after toilet past 30 day,myanmar,2007,MYH2007_public_use.sav
+Q12,Used soap on hands past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q13,Times attacked past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q14,How many times in fight 12 mos,myanmar,2007,MYH2007_public_use.sav
+Q15,How many times injured past 12 months,myanmar,2007,MYH2007_public_use.sav
+Q16,Doing what during injury past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q17,Cause of injury past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q18,How injury happened past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q19,What was serious injury past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q20,How many days bullied past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q21,How bullied past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q22,Times felt lonely past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q23,Times could not sleep past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q24,Sad and hopeless past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q25,Ever considered suicide 12 mos,myanmar,2007,MYH2007_public_use.sav
+Q26,Ever make suicide plan 12 mos,myanmar,2007,MYH2007_public_use.sav
+Q27,Number close friends,myanmar,2007,MYH2007_public_use.sav
+Q28,Age first tried cigarette,myanmar,2007,MYH2007_public_use.sav
+Q29,How many days smoked 30 days,myanmar,2007,MYH2007_public_use.sav
+Q30,Other tobacco past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q31,Try stop smoking past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q32,Others present smoking past 7 days,myanmar,2007,MYH2007_public_use.sav
+Q33,Parents who use tobacco,myanmar,2007,MYH2007_public_use.sav
+Q34,Days one drink or more past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q35,Number of drinks past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q36,How got drinks past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q37,Times drunk during life,myanmar,2007,MYH2007_public_use.sav
+Q38,Number of troubles as result of drinking,myanmar,2007,MYH2007_public_use.sav
+Q39,Number times drug use during life,myanmar,2007,MYH2007_public_use.sav
+Q40,Ever had sex,myanmar,2007,MYH2007_public_use.sav
+Q41,Age first sexual intercourse,myanmar,2007,MYH2007_public_use.sav
+Q42,How many sex partners,myanmar,2007,MYH2007_public_use.sav
+Q43,Sexual intercourse past 12 mo.,myanmar,2007,MYH2007_public_use.sav
+Q44,Used condom at last intercourse,myanmar,2007,MYH2007_public_use.sav
+Q45,Days active 60 min plus past 7 days,myanmar,2007,MYH2007_public_use.sav
+Q46,Active 60 min plus per day usual week,myanmar,2007,MYH2007_public_use.sav
+Q47,Time spent sitting on usual day,myanmar,2007,MYH2007_public_use.sav
+Q48,Walk or bike to school past 7 days,myanmar,2007,MYH2007_public_use.sav
+Q49,How long to from school past 7 days,myanmar,2007,MYH2007_public_use.sav
+Q50,Miss school no permission past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q51,Others helpful in school past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q52,Parents check homework past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q53,Parent understand troubles past 30 days,myanmar,2007,MYH2007_public_use.sav
+Q54,Parent know what you do past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN6,Went hungry most of time/always past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN7,Ate fruit 1+ times per day past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN8,Ate vegetables 1+ times per day past 30 day,myanmar,2007,MYH2007_public_use.sav
+QN9,Cleaned/brushed teeth <1 time/day past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN10,Never/rarely wash hands before eating past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN11,Never/rarely wash hands after toilet past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN12,Never/rarely use soap on hands past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN13,Attacked 1+ times past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN14,In fight 1+ times past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN15,Seriously injured 1+ times past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN16,Playing sport caused most serious injury past 12mo,myanmar,2007,MYH2007_public_use.sav
+QN17,Falling caused most serious injury past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN18,Accident caused most serious injury past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN19,Broken bone as most serious injury past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN20,Bullied 1+ of past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN21,"Of students bullied, most often hit, kicked, etc",myanmar,2007,MYH2007_public_use.sav
+QN22,Lonely most times/always past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN23,Worry prevented sleep most time/always past 12 mos,myanmar,2007,MYH2007_public_use.sav
+QN24,Sad/Hopeless everyday 2+ weeks past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN25,Considered suicide past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN26,Made suicide plan past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN27,No close friends,myanmar,2007,MYH2007_public_use.sav
+QN28,"Of current smokers, age first cigarette before 13",myanmar,2007,MYH2007_public_use.sav
+QN29,Smoked cigarettes 1+ of past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN30,Used other tobacco 1+ of past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN31,Tried to quit smoking past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN32,Others present smoking 1+ of past 7 days,myanmar,2007,MYH2007_public_use.sav
+QN33,Either/Both parents use tobacco,myanmar,2007,MYH2007_public_use.sav
+QN34,Drank 1+ days past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN35,"Of current drinkers, drank 2+ drinks/day 30 days",myanmar,2007,MYH2007_public_use.sav
+QN36,"Of current drinkers, bought alcohol in store",myanmar,2007,MYH2007_public_use.sav
+QN37,1+ times drunk in lifetime,myanmar,2007,MYH2007_public_use.sav
+QN38,Alcohol trouble 1+ times in lifetime,myanmar,2007,MYH2007_public_use.sav
+QN39,Used drugs 1+ times in lifetime,myanmar,2007,MYH2007_public_use.sav
+QN40,Ever had sex,myanmar,2007,MYH2007_public_use.sav
+QN41,Age first sexual intercourse 12 or younger,myanmar,2007,MYH2007_public_use.sav
+QN42,2+ sex partners lifetime,myanmar,2007,MYH2007_public_use.sav
+QN43,Sexual intercourse past 12 months,myanmar,2007,MYH2007_public_use.sav
+QN44,"Of sexually active 12 mos, use condoms at last sex",myanmar,2007,MYH2007_public_use.sav
+QN45,Active 60+ mins/day for all of past 7 days,myanmar,2007,MYH2007_public_use.sav
+QN46,Active 60+ min/day all 7 days of usual week,myanmar,2007,MYH2007_public_use.sav
+QN47,Sitting activities 3+ hours/day of usual day,myanmar,2007,MYH2007_public_use.sav
+QN48,Walk/Bike to/from school 0 of past 7 days,myanmar,2007,MYH2007_public_use.sav
+QN49,Less than 29 minutes to/from school past 7 days,myanmar,2007,MYH2007_public_use.sav
+QN50,Miss school no permission 1+ of past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN51,Students never/rarely kind/helpful past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN52,Parents never/rarely check homework past 30 days,myanmar,2007,MYH2007_public_use.sav
+QN53,Parents never/rarely understand problems past 30,myanmar,2007,MYH2007_public_use.sav
+QN54,Parents never/rarely know about free time past 30,myanmar,2007,MYH2007_public_use.sav
+qnrovwtg,At risk for becoming overweight,myanmar,2007,MYH2007_public_use.sav
+qnovwtg,Overweight,myanmar,2007,MYH2007_public_use.sav
+qnfrvgg,Ate 5+ fruits/vegetables 30 days,myanmar,2007,MYH2007_public_use.sav
+qnanytbg,Used any tobacco past 30 days,myanmar,2007,MYH2007_public_use.sav
+qnminpag,Exercised 60 min/day <=5 days,myanmar,2007,MYH2007_public_use.sav
+qnwkrdg,Walked/biked <2.5 hrs 7 days,myanmar,2007,MYH2007_public_use.sav
+weight,Weight,myanmar,2007,MYH2007_public_use.sav
+psu,Primary Sampling Unit,myanmar,2007,MYH2007_public_use.sav
+stratum,Stratum,myanmar,2007,MYH2007_public_use.sav
+Q1,How old are you,bahamas,2013,BSH2013_Public_Use.sav
+Q2,Sex,bahamas,2013,BSH2013_Public_Use.sav
+Q3,In what grade are you,bahamas,2013,BSH2013_Public_Use.sav
+Q4,How tall are you,bahamas,2013,BSH2013_Public_Use.sav
+Q5,How much do you weigh,bahamas,2013,BSH2013_Public_Use.sav
+Q6,Went hungry past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q7,Eat fruit per day past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q8,Eat vegetables past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q9,Drink soft drinks past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q10,Ate fast food past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+Q11,How many times per day brush teeth,bahamas,2013,BSH2013_Public_Use.sav
+Q12,Wash hands before eating past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q13,Wash hands after toilet past 30 day,bahamas,2013,BSH2013_Public_Use.sav
+Q14,Used soap on hands past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q15,Times attacked past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q16,How many times in fight 12 mos,bahamas,2013,BSH2013_Public_Use.sav
+Q17,How many times injured past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+Q18,What was serious injury past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q19,Cause of injury past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q20,How many days bullied past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q21,How bullied past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q22,Times felt lonely past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q23,Times could not sleep past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q24,Ever considered suicide 12 mos,bahamas,2013,BSH2013_Public_Use.sav
+Q25,Ever make suicide plan 12 mos,bahamas,2013,BSH2013_Public_Use.sav
+Q26,Times attempted suicide 12 mos.,bahamas,2013,BSH2013_Public_Use.sav
+Q27,Number close friends,bahamas,2013,BSH2013_Public_Use.sav
+Q28,Age first tried cigarette,bahamas,2013,BSH2013_Public_Use.sav
+Q29,How many days smoked 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q30,Other tobacco past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q31,Try stop smoking past 12 mo.,bahamas,2013,BSH2013_Public_Use.sav
+Q32,Others present smoking past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+Q33,Parents who use tobacco,bahamas,2013,BSH2013_Public_Use.sav
+Q34,Age first drink alcohol,bahamas,2013,BSH2013_Public_Use.sav
+Q35,Days one drink or more past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q36,Number of drinks past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q37,How got drinks past 30 days ,bahamas,2013,BSH2013_Public_Use.sav
+Q38,Times drunk during life,bahamas,2013,BSH2013_Public_Use.sav
+Q39,Number of troubles as result of drinking,bahamas,2013,BSH2013_Public_Use.sav
+Q40,Age first drugs,bahamas,2013,BSH2013_Public_Use.sav
+Q41,Times used marijuana lifetime,bahamas,2013,BSH2013_Public_Use.sav
+Q42,Times used marijuana past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q43,Times used amphetamines lifetime,bahamas,2013,BSH2013_Public_Use.sav
+Q44,Ever had sex,bahamas,2013,BSH2013_Public_Use.sav
+Q45,Age first sexual intercourse,bahamas,2013,BSH2013_Public_Use.sav
+Q46,How many sex partners,bahamas,2013,BSH2013_Public_Use.sav
+Q47,Used condom at last intercourse,bahamas,2013,BSH2013_Public_Use.sav
+Q48,Used birth control last intercourse,bahamas,2013,BSH2013_Public_Use.sav
+Q49,Days active 60 min plus past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+Q50,Walk or bike to school past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+Q51,Days went to PE each week,bahamas,2013,BSH2013_Public_Use.sav
+Q52,Time spent sitting on usual day,bahamas,2013,BSH2013_Public_Use.sav
+Q53,Miss school no permission past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q54,Others helpful in school past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q55,Parents check homework past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q56,Parent understand troubles past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q57,Parent know what you do past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+Q58,Parent go through things past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN6,Went hungry most of time/always past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN7,Ate fruit 2+ times per day past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN8,Ate vegetables 3+ times per day past 30 day,bahamas,2013,BSH2013_Public_Use.sav
+QN9,Drank soft drinks 1+ times per day past 30 day,bahamas,2013,BSH2013_Public_Use.sav
+QN10,Ate fast food 3+ days past 7 day,bahamas,2013,BSH2013_Public_Use.sav
+QN11,Cleaned/brushed teeth <1 time/day past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN12,Never/rarely wash hands before eating past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN13,Never/rarely wash hands after toilet past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN14,Never/rarely use soap on hands past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN15,Attacked 1+ times past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN16,In fight 1+ times past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN17,Seriously injured 1+ times past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN18,Broken bone as most serious injury ,bahamas,2013,BSH2013_Public_Use.sav
+QN19,Motor vehicle caused most serious injury ,bahamas,2013,BSH2013_Public_Use.sav
+QN20,Bullied 1+ of past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN21,"Of students bullied, most often hit, kicked, etc",bahamas,2013,BSH2013_Public_Use.sav
+QN22,Lonely most times/always past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN23,Worry prevented sleep most time/always past 12 mos,bahamas,2013,BSH2013_Public_Use.sav
+QN24,Considered suicide past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN25,Made suicide plan past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN26,1+ times attempt suicide 12 mos.,bahamas,2013,BSH2013_Public_Use.sav
+QN27,No close friends,bahamas,2013,BSH2013_Public_Use.sav
+QN28,Age first cigarette before 14,bahamas,2013,BSH2013_Public_Use.sav
+QN29,Smoked cigarettes 1+ of past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN30,Used other tobacco 1+ of past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN31,Tried to quit smoking past 12 months,bahamas,2013,BSH2013_Public_Use.sav
+QN32,Others present smoking 1+ of past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+QN33,Either/Both parents use tobacco,bahamas,2013,BSH2013_Public_Use.sav
+QN34,Age first alcohol before 14,bahamas,2013,BSH2013_Public_Use.sav
+QN35,Drank 1+ days past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN36,"Of current drinkers, drank 2+ drinks/day 30 days",bahamas,2013,BSH2013_Public_Use.sav
+QN37,"Of current drinkers, got alcohol from friends",bahamas,2013,BSH2013_Public_Use.sav
+QN38,1+ times drunk in lifetime,bahamas,2013,BSH2013_Public_Use.sav
+QN39,Alcohol trouble 1+ times in lifetime,bahamas,2013,BSH2013_Public_Use.sav
+QN40,Age first drugs before 14,bahamas,2013,BSH2013_Public_Use.sav
+QN41,Marijuana 1+ times in lifetime,bahamas,2013,BSH2013_Public_Use.sav
+QN42,Marijuana 1+ times p 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN43,Amphetamines 1+ times lifetime,bahamas,2013,BSH2013_Public_Use.sav
+QN44,Ever had sex,bahamas,2013,BSH2013_Public_Use.sav
+QN45,Age first sexual intercourse before 14,bahamas,2013,BSH2013_Public_Use.sav
+QN46,2+ sex partners lifetime,bahamas,2013,BSH2013_Public_Use.sav
+QN47,Used condom at last sex,bahamas,2013,BSH2013_Public_Use.sav
+QN48,Used birth control at last sex,bahamas,2013,BSH2013_Public_Use.sav
+QN49,Active 60+ mins/day for 5+ of past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+QN50,Walk/Bike to/from school 0 of past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+QN51,3+ days PE each week,bahamas,2013,BSH2013_Public_Use.sav
+QN52,Sitting activities 3+ hours/day of usual day,bahamas,2013,BSH2013_Public_Use.sav
+QN53,Miss school no permission 1+ of past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN54,Students most/always kind 30 days,bahamas,2013,BSH2013_Public_Use.sav
+QN55,Parents most/always check homework,bahamas,2013,BSH2013_Public_Use.sav
+QN56,Parents most/always understand problems,bahamas,2013,BSH2013_Public_Use.sav
+QN57,Parents most/always know about free time ,bahamas,2013,BSH2013_Public_Use.sav
+QN58,Parents never/rarely go thru things,bahamas,2013,BSH2013_Public_Use.sav
+site,Site Code,bahamas,2013,BSH2013_Public_Use.sav
+schoolid,School Identifier,bahamas,2013,BSH2013_Public_Use.sav
+classid,Class Identifier,bahamas,2013,BSH2013_Public_Use.sav
+qnowtg,Overweight,bahamas,2013,BSH2013_Public_Use.sav
+qnobeseg,Obese,bahamas,2013,BSH2013_Public_Use.sav
+qnunwtg,Underweight,bahamas,2013,BSH2013_Public_Use.sav
+qnfrvgg,Ate 5+ fruits/vegetables 30 days,bahamas,2013,BSH2013_Public_Use.sav
+qnanytbg,Used any tobacco past 30 days,bahamas,2013,BSH2013_Public_Use.sav
+qnpa7g,Physically active all past 7 days,bahamas,2013,BSH2013_Public_Use.sav
+qnpe5g,Attended PE 5+ days each week,bahamas,2013,BSH2013_Public_Use.sav
+qnc1g,"Among heavy drinkers, ever sex",bahamas,2013,BSH2013_Public_Use.sav
+qnc2g,"Among those worried, currently bullied",bahamas,2013,BSH2013_Public_Use.sav
+weight,Weight,bahamas,2013,BSH2013_Public_Use.sav
+stratum,Stratum,bahamas,2013,BSH2013_Public_Use.sav
+psu,Primary Sampling Unit,bahamas,2013,BSH2013_Public_Use.sav
