@@ -38,3 +38,8 @@ gshs_vars = merge(gshs_vars,all_file_names,by="filename")
 
 # save(gshs,gshs_vars,file="../gshs_all.RData")
 # write_csv(gshs_vars,"../gshs_vars_all.csv")
+
+gshs$fruit = gshs$Q7
+gshs$veg = gshs$Q8
+gshs$soda = NA
+gshs$soda[which(gshs$filename %in% meta_vars$filename)] = gshs$Q9[which(gshs$filename %in% meta_vars$filename)] 
