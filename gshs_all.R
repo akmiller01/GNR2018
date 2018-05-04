@@ -18,6 +18,8 @@ link_elems = getNodeSet(datasets_page_source,"//ul[@class='list_dash']/li/a")
 link_suffixes = sapply(link_elems,xmlGetAttr,"href")
 link_suffixes = unique(c(link_suffixes,"/ncds/surveillance/gshs/myanmardataset/en/","/ncds/surveillance/gshs/bahamasdataset/en/"))
 
+skip_standardization = c("benin")
+
 data.list = list()
 data.index = 1
 
@@ -37,43 +39,52 @@ for(full_link in full_links){
   download.file(national_link,tmp)
   
   unzipped = unzip(tmp)
-  
-  tabs = extract_tables(nat_pdf, guess=F, area=list(c(168,44,792,216)))
-  # tabs = extract_tables(nat_pdf, guess=F, columns = list(c(54,102,162)), area=list(c(162,54,792,220)))
-  tabs.list = list()
-  tabs.index = 1
-  for(tab in tabs){
-    if(ncol(tab)==4){
-      tabs.list[[tabs.index]] = data.frame(tab)[c("X1","X2","X3")]
-      tabs.index = tabs.index + 1
-    }else if(ncol(tab)==3){
-      tabs.list[[tabs.index]] = data.frame(tab)
-      tabs.index = tabs.index + 1
-    }else if(ncol(tab)==2){
-      temp.tab = data.frame(tab)
-      temp.tab$X3 = temp.tab$X2
-      tabs.list[[tabs.index]] = temp.tab
-      tabs.index = tabs.index + 1
+  if(!country_name %in% skip_standardization){
+    tabs = extract_tables(nat_pdf, guess=F, area=list(c(168,44,792,220)))
+    # tabs = extract_tables(nat_pdf, guess=F, columns = list(c(54,102,162)), area=list(c(162,54,792,220)))
+    tabs.list = list()
+    tabs.index = 1
+    for(tab in tabs){
+      if(ncol(tab)==4){
+        tabs.list[[tabs.index]] = data.frame(tab)[c("X1","X2","X3")]
+        tabs.index = tabs.index + 1
+      }else if(ncol(tab)==3){
+        tabs.list[[tabs.index]] = data.frame(tab)
+        tabs.index = tabs.index + 1
+      }else if(ncol(tab)==2){
+        temp.tab = data.frame(tab)
+        temp.tab$X3 = temp.tab$X2
+        tabs.list[[tabs.index]] = temp.tab
+        tabs.index = tabs.index + 1
+      }
+    }
+    standard.names = rbindlist(tabs.list)
+    standard.names[which(standard.names$X3=="" | is.na(standard.names$X3))]$X3 = standard.names[which(standard.names$X3=="" | is.na(standard.names$X3))]$X2
+    standard.names = standard.names[,c("X2","X3"),with=FALSE]
+    names(standard.names) = c("standard","non.standard")
+    standard.names$standard = unfactor(standard.names$standard)
+    standard.names$non.standard = unfactor(standard.names$non.standard) 
+  }else{
+    if(exists("standard.names")){
+      rm(standard.names)
     }
   }
-  standard.names = rbindlist(tabs.list)
-  standard.names[which(standard.names$X3=="" | is.na(standard.names$X3))]$X3 = standard.names[which(standard.names$X3=="" | is.na(standard.names$X3))]$X2
-  standard.names = standard.names[,c("X2","X3"),with=FALSE]
-  names(standard.names) = c("standard","non.standard")
-  standard.names$standard = unfactor(standard.names$standard)
-  standard.names$non.standard = unfactor(standard.names$non.standard)
   if(tolower(file_ext(unzipped))=="sav"){
     #Unzipped is a file
     file_base = basename(unzipped)
     gshs_nat = read.spss(unzipped, use.value.labels = F)
     gshs_nat = data.frame(gshs_nat)
     names(gshs_nat) = toupper(names(gshs_nat))
-    if(sum(!standard.names$standard %in% names(gshs_nat))>0){
-      #Not already standardized
-      message("Standardizing!")
-      standard.names = subset(standard.names, non.standard %in% names(gshs_nat))
-      gshs_nat = gshs_nat[standard.names$non.standard]
-      names(gshs_nat) = standard.names$standard 
+    if(!country_name %in% skip_standardization){
+      message("Number of standard names not in names: ",sum(!standard.names$standard %in% names(gshs_nat)))
+      message("Number of nonstandard names not in names: ",sum(!standard.names$non.standard %in% names(gshs_nat)))
+      if(sum(!standard.names$standard %in% names(gshs_nat))>0){
+        #Not already standardized
+        message("Standardizing!")
+        standard.names = subset(standard.names, non.standard %in% names(gshs_nat))
+        gshs_nat = gshs_nat[standard.names$non.standard]
+        names(gshs_nat) = standard.names$standard 
+      }
     }
     gshs_nat$country = country_name
     gshs_nat$year = year
@@ -86,11 +97,20 @@ for(full_link in full_links){
     savs = list.files(path=unzipped, pattern="*.sav", full.names= T, recursive = T, ignore.case= T)
     for(sav in savs){
       file_base = basename(sav)
-      gshs_nat = read.spss(sav, use.value.labels = F)
+      gshs_nat = read.spss(unzipped, use.value.labels = F)
       gshs_nat = data.frame(gshs_nat)
       names(gshs_nat) = toupper(names(gshs_nat))
-      gshs_nat = gshs_nat[standard.names$non.standard]
-      names(gshs_nat) = standard.names$standard
+      if(!country_name %in% skip_standardization){
+        message("Number of standard names not in names: ",sum(!standard.names$standard %in% names(gshs_nat)))
+        message("Number of nonstandard names not in names: ",sum(!standard.names$non.standard %in% names(gshs_nat)))
+        if(sum(!standard.names$standard %in% names(gshs_nat))>0){
+          #Not already standardized
+          message("Standardizing!")
+          standard.names = subset(standard.names, non.standard %in% names(gshs_nat))
+          gshs_nat = gshs_nat[standard.names$non.standard]
+          names(gshs_nat) = standard.names$standard 
+        }
+      }
       gshs_nat$country = country_name
       gshs_nat$year = year
       gshs_nat$filename = file_base
