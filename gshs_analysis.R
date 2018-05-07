@@ -4,7 +4,7 @@ if(length(new.packages)) install.packages(new.packages)
 
 lapply(list.of.packages, require, character.only=T)
 
-setwd("~/GNR")
+setwd("C:/git/GNR2018")
 
 load("gshs_all.RData")
 
