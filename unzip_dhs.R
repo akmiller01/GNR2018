@@ -135,7 +135,7 @@ table4 <- merge(table4,regions,by=c("region","dhscc","phase"))
 table4 <- merge(table4,survey_years,by=c("dhscc","phase"))
 table4[, c("region","dhscc","phase"):=NULL] 
 table4 = melt(table4,id.vars=c("country","region.name","urban","year"))
-table4 = dcast(table4, country+region.name+urban~year+variable)
+table4 = dcast(table4, country+region.name~year+variable+urban)
 
 #by region and wealth
 table5 = dat[,.(stunting.prev=weighted.mean(stunted,weights,na.rm=T)),by=.(dhscc,phase,region,wealth.q)]
@@ -143,7 +143,7 @@ table5 <- merge(table5,regions,by=c("region","dhscc","phase"))
 table5 <- merge(table5,survey_years,by=c("dhscc","phase"))
 table5[, c("region","dhscc","phase"):=NULL] 
 table5 = melt(table5,id.vars=c("country","region.name","wealth.q","year"))
-table5 = dcast(table5, country+region.name+wealth.q~year+variable)
+table5 = dcast(table5, country+region.name~year+variable+wealth.q)
 
 #by region and urban and wealth
 table6 = dat[,.(stunting.prev=weighted.mean(stunted,weights,na.rm=T)),by=.(dhscc,phase,region,urban,wealth.q)]
