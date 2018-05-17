@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table","readr","survey","Hmisc")
+list.of.packages <- c("data.table","readr","survey","Hmisc","WDI","varhandle","ggplot2","scales")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
@@ -155,6 +155,89 @@ for(ctry in countries){
 tab = rbindlist(tab.list, fill=T)
 isos <- read_csv("gshs_isos.csv")
 tab <- merge(tab,isos,by="country")
-write_csv(tab,"gshs_tab.csv")
+# write_csv(tab,"gshs_tab.csv")
 
+tab$year = unfactor(tab$year)
 
+pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year),end=max(tab$year))
+pop = pop[c("iso3c","year","SP.POP.1317.TO.UN")]
+names(pop) = c("ISO_A3","pop_year","pop")
+regions = read_csv("regions.csv")
+regions = regions[c("iso_3","region","subregion")]
+setnames(regions,"iso_3","ISO_A3")
+
+#Curacao and Tuvalu drop out due to no data
+tab$pop_year = tab$year
+tab$pop_year[which(tab$ISO_A3=="ATG")] = 2006
+tab$pop_year[which(tab$ISO_A3=="CYM")] = 2006
+tab$pop_year[which(tab$ISO_A3=="DMA")] = 2005
+tab$pop_year[which(tab$ISO_A3=="KIR")] = 2006
+tab$pop_year[which(tab$ISO_A3=="KNA")] = 2005
+tab$pop_year[which(tab$ISO_A3=="SYC")] = 2005
+tab$pop_year[which(tab$ISO_A3=="ATG")] = 2006
+
+tab = merge(tab,pop,by=c("ISO_A3","pop_year"))
+tab = merge(tab,regions,by="ISO_A3")
+
+by_region = tab[,.(
+  n = sum(!is.na(country))
+  ,mean.no.fruit = weighted.mean(no.fruit,pop,na.rm=T)
+  ,mean.daily.fruit = weighted.mean(daily.fruit,pop,na.rm=T)
+  ,mean.no.veg = weighted.mean(no.veg,pop,na.rm=T)
+  ,mean.daily.veg = weighted.mean(daily.veg,pop,na.rm=T)
+  ,mean.no.soda = weighted.mean(no.soda,pop,na.rm=T)
+  ,mean.daily.soda = weighted.mean(daily.soda,pop,na.rm=T)
+  ,mean.no.fastfood = weighted.mean(no.fastfood,pop,na.rm=T)
+  ,mean.daily.fastfood = weighted.mean(daily.fastfood,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry = weighted.mean(never.or.rarely.hungry,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry = weighted.mean(always.or.mostly.hungry,pop,na.rm=T)
+  ,mean.never.or.rarely.soap = weighted.mean(never.or.rarely.soap,pop,na.rm=T)
+  ,mean.always.or.mostly.soap = weighted.mean(always.or.mostly.soap,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet = weighted.mean(never.or.rarely.hand.wash.after.toilet,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet = weighted.mean(always.or.mostly.hand.wash.after.toilet,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating = weighted.mean(never.or.rarely.hand.wash.before.eating,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating = weighted.mean(always.or.mostly.hand.wash.before.eating,pop,na.rm=T)
+),by=.(region,subregion)]
+by_region = subset(by_region,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
+
+write_csv(by_region,"gshs_by_region.csv",na="")
+
+titleize = function(x){
+  split = strsplit(x,".",fixed=T)[[1]]
+  return(capitalize(paste(split,collapse=" ")))
+}
+
+vars = c(
+  "mean.no.fruit"
+  ,"mean.daily.fruit"
+  ,"mean.no.veg"
+  ,"mean.daily.veg"
+  ,"mean.no.soda"
+  ,"mean.daily.soda"
+  ,"mean.no.fastfood"
+  ,"mean.daily.fastfood"
+  ,"mean.never.or.rarely.hungry"
+  ,"mean.always.or.mostly.hungry"
+  ,"mean.never.or.rarely.soap"
+  ,"mean.always.or.mostly.soap"
+  ,"mean.never.or.rarely.hand.wash.after.toilet"
+  ,"mean.always.or.mostly.hand.wash.after.toilet"
+  ,"mean.never.or.rarely.hand.wash.before.eating"
+  ,"mean.always.or.mostly.hand.wash.before.eating"
+)
+setwd("C:/git/GNR2018/plots")
+for(var in vars){
+  tmp = subset(by_region,!is.nan(get(var)))
+  p = ggplot(tmp,aes(x=subregion,y=get(var),fill=region)) +
+    geom_bar(stat="identity") +
+    scale_y_continuous(labels = scales::percent) +
+    facet_grid(. ~ region, space="free_x", scales="free_x", switch="x") +
+    theme_classic() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+          strip.placement = "outside",
+          strip.background = element_rect(fill=NA, colour="grey50"),
+          panel.spacing.x=unit(0,"cm")) +
+    labs(x="", y=titleize(var)) +
+    guides(fill=F)
+  ggsave(paste0(var,".jpg"),p)
+}
