@@ -1,9 +1,9 @@
-list.of.packages <- c("RPostgreSQL","sqldf")
+list.of.packages <- c("RPostgreSQL")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
 
-cred <- readLines("C:/git/GNR2018/cred.txt")
+cred <- readLines("~/GNR/cred.txt")
 
 drv <- dbDriver("PostgreSQL")
 
