@@ -9,7 +9,7 @@ make.sql.names <- function(x){
   return(substr(iconv(gsub(".","_",make.names(x),fixed=T),to="ASCII",sub=""),1,63))
 }
 
-cred <- readLines("C:/git/GNR2018/cred.txt")
+cred <- readLines("C:/git/cred.txt")
 
 drv <- dbDriver("PostgreSQL")
 
