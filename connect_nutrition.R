@@ -3,7 +3,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
 
-cred <- readLines("~/GNR/cred.txt")
+cred <- readLines("C:/git/cred.txt")
 
 drv <- dbDriver("PostgreSQL")
 
