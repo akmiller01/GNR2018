@@ -4,7 +4,7 @@ if(length(new.packages)) install.packages(new.packages)
 
 lapply(list.of.packages, require, character.only=T)
 
-setwd("C:/git/GNR2018")
+setwd("~/GNR/")
 
 load("gshs_all.RData")
 
@@ -63,6 +63,12 @@ for(hweating.var in hweating.vars){
 }
 gshs$never.or.rarely.hand.wash.before.eating = as.integer(gshs$hweating<=2)
 gshs$always.or.mostly.hand.wash.before.eating = as.integer(gshs$hweating>=4)
+
+#Gender
+gshs$sex=NA
+gshs$sex[which(gshs$Q2==1)] = "Male"
+gshs$sex[which(gshs$Q2==2)] = "Female"
+gshs$sex = factor(gshs$sex,labels=c("Male","Female"))
 
 #Mongolia is missing survey weights
 gshs = subset(gshs, country!="mongolia")
@@ -130,6 +136,126 @@ for(ctry in countries){
     always.or.mostly.hand.wash.before.eating = NA
   }
   
+  #Male
+  dat.male = subset(dat,sex=="Male")
+  dsn.male = svydesign(ids = ~1, data = dat.male, weights = ~WEIGHT)
+  if(sum(!is.na(dat.male$fruit))>0){
+    no.fruit.male = svymean(~no.fruit, design = dsn.male,na.rm=T)[1]
+    daily.fruit.male = svymean(~daily.fruit, design = dsn.male,na.rm=T)[1]
+  }else{
+    no.fruit.male = NA
+    daily.fruit.male = NA
+  }
+  if(sum(!is.na(dat.male$veg))>0){
+    no.veg.male = svymean(~no.veg, design = dsn.male,na.rm=T)[1]
+    daily.veg.male = svymean(~daily.veg, design = dsn.male,na.rm=T)[1]
+  }else{
+    no.veg.male = NA
+    daily.veg.male = NA
+  }
+  if(sum(!is.na(dat.male$soda))>0){
+    no.soda.male = svymean(~no.soda, design = dsn.male,na.rm=T)[1]
+    daily.soda.male = svymean(~daily.soda, design = dsn.male,na.rm=T)[1]
+  }else{
+    no.soda.male = NA
+    daily.soda.male = NA
+  }
+  if(sum(!is.na(dat.male$fastfood))>0){
+    no.fastfood.male = svymean(~no.fastfood, design = dsn.male,na.rm=T)[1]
+    daily.fastfood.male = svymean(~daily.fastfood, design = dsn.male,na.rm=T)[1]
+  }else{
+    no.fastfood.male = NA
+    daily.fastfood.male = NA
+  }
+  if(sum(!is.na(dat.male$hungry))>0){
+    never.or.rarely.hungry.male = svymean(~never.or.rarely.hungry, design = dsn.male,na.rm=T)[1]
+    always.or.mostly.hungry.male = svymean(~always.or.mostly.hungry, design = dsn.male,na.rm=T)[1]
+  }else{
+    never.or.rarely.hungry.male = NA
+    always.or.mostly.hungry.male = NA
+  }
+  if(sum(!is.na(dat.male$soap))>0){
+    never.or.rarely.soap.male = svymean(~never.or.rarely.soap, design = dsn.male,na.rm=T)[1]
+    always.or.mostly.soap.male = svymean(~always.or.mostly.soap, design = dsn.male,na.rm=T)[1]
+  }else{
+    never.or.rarely.soap.male = NA
+    always.or.mostly.soap.male = NA
+  }
+  if(sum(!is.na(dat.male$hwtoilet))>0){
+    never.or.rarely.hand.wash.after.toilet.male = svymean(~never.or.rarely.hand.wash.after.toilet, design = dsn.male,na.rm=T)[1]
+    always.or.mostly.hand.wash.after.toilet.male = svymean(~always.or.mostly.hand.wash.after.toilet, design = dsn.male,na.rm=T)[1]
+  }else{
+    never.or.rarely.hand.wash.after.toilet.male = NA
+    always.or.mostly.hand.wash.after.toilet.male = NA
+  }
+  if(sum(!is.na(dat.male$hweating))>0){
+    never.or.rarely.hand.wash.before.eating.male = svymean(~never.or.rarely.hand.wash.before.eating, design = dsn.male,na.rm=T)[1]
+    always.or.mostly.hand.wash.before.eating.male = svymean(~always.or.mostly.hand.wash.before.eating, design = dsn.male,na.rm=T)[1]
+  }else{
+    never.or.rarely.hand.wash.before.eating.male = NA
+    always.or.mostly.hand.wash.before.eating.male = NA
+  }
+  
+  #Female
+  dat.female = subset(dat,sex=="Female")
+  dsn.female = svydesign(ids = ~1, data = dat.female, weights = ~WEIGHT)
+  if(sum(!is.na(dat.female$fruit))>0){
+    no.fruit.female = svymean(~no.fruit, design = dsn.female,na.rm=T)[1]
+    daily.fruit.female = svymean(~daily.fruit, design = dsn.female,na.rm=T)[1]
+  }else{
+    no.fruit.female = NA
+    daily.fruit.female = NA
+  }
+  if(sum(!is.na(dat.female$veg))>0){
+    no.veg.female = svymean(~no.veg, design = dsn.female,na.rm=T)[1]
+    daily.veg.female = svymean(~daily.veg, design = dsn.female,na.rm=T)[1]
+  }else{
+    no.veg.female = NA
+    daily.veg.female = NA
+  }
+  if(sum(!is.na(dat.female$soda))>0){
+    no.soda.female = svymean(~no.soda, design = dsn.female,na.rm=T)[1]
+    daily.soda.female = svymean(~daily.soda, design = dsn.female,na.rm=T)[1]
+  }else{
+    no.soda.female = NA
+    daily.soda.female = NA
+  }
+  if(sum(!is.na(dat.female$fastfood))>0){
+    no.fastfood.female = svymean(~no.fastfood, design = dsn.female,na.rm=T)[1]
+    daily.fastfood.female = svymean(~daily.fastfood, design = dsn.female,na.rm=T)[1]
+  }else{
+    no.fastfood.female = NA
+    daily.fastfood.female = NA
+  }
+  if(sum(!is.na(dat.female$hungry))>0){
+    never.or.rarely.hungry.female = svymean(~never.or.rarely.hungry, design = dsn.female,na.rm=T)[1]
+    always.or.mostly.hungry.female = svymean(~always.or.mostly.hungry, design = dsn.female,na.rm=T)[1]
+  }else{
+    never.or.rarely.hungry.female = NA
+    always.or.mostly.hungry.female = NA
+  }
+  if(sum(!is.na(dat.female$soap))>0){
+    never.or.rarely.soap.female = svymean(~never.or.rarely.soap, design = dsn.female,na.rm=T)[1]
+    always.or.mostly.soap.female = svymean(~always.or.mostly.soap, design = dsn.female,na.rm=T)[1]
+  }else{
+    never.or.rarely.soap.female = NA
+    always.or.mostly.soap.female = NA
+  }
+  if(sum(!is.na(dat.female$hwtoilet))>0){
+    never.or.rarely.hand.wash.after.toilet.female = svymean(~never.or.rarely.hand.wash.after.toilet, design = dsn.female,na.rm=T)[1]
+    always.or.mostly.hand.wash.after.toilet.female = svymean(~always.or.mostly.hand.wash.after.toilet, design = dsn.female,na.rm=T)[1]
+  }else{
+    never.or.rarely.hand.wash.after.toilet.female = NA
+    always.or.mostly.hand.wash.after.toilet.female = NA
+  }
+  if(sum(!is.na(dat.female$hweating))>0){
+    never.or.rarely.hand.wash.before.eating.female = svymean(~never.or.rarely.hand.wash.before.eating, design = dsn.female,na.rm=T)[1]
+    always.or.mostly.hand.wash.before.eating.female = svymean(~always.or.mostly.hand.wash.before.eating, design = dsn.female,na.rm=T)[1]
+  }else{
+    never.or.rarely.hand.wash.before.eating.female = NA
+    always.or.mostly.hand.wash.before.eating.female = NA
+  }
+  
   df = data.frame(country=ctry,
                   year,
                   no.fruit,
@@ -147,7 +273,39 @@ for(ctry in countries){
                   never.or.rarely.hand.wash.after.toilet,
                   always.or.mostly.hand.wash.after.toilet,
                   never.or.rarely.hand.wash.before.eating,
-                  always.or.mostly.hand.wash.before.eating
+                  always.or.mostly.hand.wash.before.eating,
+                  no.fruit.male,
+                  daily.fruit.male,
+                  no.veg.male,
+                  daily.veg.male,
+                  no.soda.male,
+                  daily.soda.male,
+                  no.fastfood.male,
+                  daily.fastfood.male,
+                  never.or.rarely.hungry.male,
+                  always.or.mostly.hungry.male,
+                  never.or.rarely.soap.male,
+                  always.or.mostly.soap.male,
+                  never.or.rarely.hand.wash.after.toilet.male,
+                  always.or.mostly.hand.wash.after.toilet.male,
+                  never.or.rarely.hand.wash.before.eating.male,
+                  always.or.mostly.hand.wash.before.eating.male,
+                  no.fruit.female,
+                  daily.fruit.female,
+                  no.veg.female,
+                  daily.veg.female,
+                  no.soda.female,
+                  daily.soda.female,
+                  no.fastfood.female,
+                  daily.fastfood.female,
+                  never.or.rarely.hungry.female,
+                  always.or.mostly.hungry.female,
+                  never.or.rarely.soap.female,
+                  always.or.mostly.soap.female,
+                  never.or.rarely.hand.wash.after.toilet.female,
+                  always.or.mostly.hand.wash.after.toilet.female,
+                  never.or.rarely.hand.wash.before.eating.female,
+                  always.or.mostly.hand.wash.before.eating.female
                   )
   tab.list[[ctry]] = df
 }
@@ -197,6 +355,38 @@ by_region = tab[,.(
   ,mean.always.or.mostly.hand.wash.after.toilet = weighted.mean(always.or.mostly.hand.wash.after.toilet,pop,na.rm=T)
   ,mean.never.or.rarely.hand.wash.before.eating = weighted.mean(never.or.rarely.hand.wash.before.eating,pop,na.rm=T)
   ,mean.always.or.mostly.hand.wash.before.eating = weighted.mean(always.or.mostly.hand.wash.before.eating,pop,na.rm=T)
+  ,mean.no.fruit.male = weighted.mean(no.fruit.male,pop,na.rm=T)
+  ,mean.daily.fruit.male = weighted.mean(daily.fruit.male,pop,na.rm=T)
+  ,mean.no.veg.male = weighted.mean(no.veg.male,pop,na.rm=T)
+  ,mean.daily.veg.male = weighted.mean(daily.veg.male,pop,na.rm=T)
+  ,mean.no.soda.male = weighted.mean(no.soda.male,pop,na.rm=T)
+  ,mean.daily.soda.male = weighted.mean(daily.soda.male,pop,na.rm=T)
+  ,mean.no.fastfood.male = weighted.mean(no.fastfood.male,pop,na.rm=T)
+  ,mean.daily.fastfood.male = weighted.mean(daily.fastfood.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry.male = weighted.mean(never.or.rarely.hungry.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry.male = weighted.mean(always.or.mostly.hungry.male,pop,na.rm=T)
+  ,mean.never.or.rarely.soap.male = weighted.mean(never.or.rarely.soap.male,pop,na.rm=T)
+  ,mean.always.or.mostly.soap.male = weighted.mean(always.or.mostly.soap.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet.male = weighted.mean(never.or.rarely.hand.wash.after.toilet.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet.male = weighted.mean(always.or.mostly.hand.wash.after.toilet.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating.male = weighted.mean(never.or.rarely.hand.wash.before.eating.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating.male = weighted.mean(always.or.mostly.hand.wash.before.eating.male,pop,na.rm=T)
+  ,mean.no.fruit.female = weighted.mean(no.fruit.female,pop,na.rm=T)
+  ,mean.daily.fruit.female = weighted.mean(daily.fruit.female,pop,na.rm=T)
+  ,mean.no.veg.female = weighted.mean(no.veg.female,pop,na.rm=T)
+  ,mean.daily.veg.female = weighted.mean(daily.veg.female,pop,na.rm=T)
+  ,mean.no.soda.female = weighted.mean(no.soda.female,pop,na.rm=T)
+  ,mean.daily.soda.female = weighted.mean(daily.soda.female,pop,na.rm=T)
+  ,mean.no.fastfood.female = weighted.mean(no.fastfood.female,pop,na.rm=T)
+  ,mean.daily.fastfood.female = weighted.mean(daily.fastfood.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry.female = weighted.mean(never.or.rarely.hungry.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry.female = weighted.mean(always.or.mostly.hungry.female,pop,na.rm=T)
+  ,mean.never.or.rarely.soap.female = weighted.mean(never.or.rarely.soap.female,pop,na.rm=T)
+  ,mean.always.or.mostly.soap.female = weighted.mean(always.or.mostly.soap.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet.female = weighted.mean(never.or.rarely.hand.wash.after.toilet.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet.female = weighted.mean(always.or.mostly.hand.wash.after.toilet.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating.female = weighted.mean(never.or.rarely.hand.wash.before.eating.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating.female = weighted.mean(always.or.mostly.hand.wash.before.eating.female,pop,na.rm=T)
 ),by=.(region,subregion)]
 by_region = subset(by_region,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
 
@@ -224,8 +414,40 @@ vars = c(
   ,"mean.always.or.mostly.hand.wash.after.toilet"
   ,"mean.never.or.rarely.hand.wash.before.eating"
   ,"mean.always.or.mostly.hand.wash.before.eating"
+  ,"mean.no.fruit.male"
+  ,"mean.daily.fruit.male"
+  ,"mean.no.veg.male"
+  ,"mean.daily.veg.male"
+  ,"mean.no.soda.male"
+  ,"mean.daily.soda.male"
+  ,"mean.no.fastfood.male"
+  ,"mean.daily.fastfood.male"
+  ,"mean.never.or.rarely.hungry.male"
+  ,"mean.always.or.mostly.hungry.male"
+  ,"mean.never.or.rarely.soap.male"
+  ,"mean.always.or.mostly.soap.male"
+  ,"mean.never.or.rarely.hand.wash.after.toilet.male"
+  ,"mean.always.or.mostly.hand.wash.after.toilet.male"
+  ,"mean.never.or.rarely.hand.wash.before.eating.male"
+  ,"mean.always.or.mostly.hand.wash.before.eating.male"
+  ,"mean.no.fruit.female"
+  ,"mean.daily.fruit.female"
+  ,"mean.no.veg.female"
+  ,"mean.daily.veg.female"
+  ,"mean.no.soda.female"
+  ,"mean.daily.soda.female"
+  ,"mean.no.fastfood.female"
+  ,"mean.daily.fastfood.female"
+  ,"mean.never.or.rarely.hungry.female"
+  ,"mean.always.or.mostly.hungry.female"
+  ,"mean.never.or.rarely.soap.female"
+  ,"mean.always.or.mostly.soap.female"
+  ,"mean.never.or.rarely.hand.wash.after.toilet.female"
+  ,"mean.always.or.mostly.hand.wash.after.toilet.female"
+  ,"mean.never.or.rarely.hand.wash.before.eating.female"
+  ,"mean.always.or.mostly.hand.wash.before.eating.female"
 )
-setwd("C:/git/GNR2018/plots")
+setwd("~/GNR/plots")
 for(var in vars){
   tmp = subset(by_region,!is.nan(get(var)))
   p = ggplot(tmp,aes(x=subregion,y=get(var),fill=region)) +
