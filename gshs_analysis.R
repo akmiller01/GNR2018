@@ -320,11 +320,9 @@ tab$year = unfactor(tab$year)
 pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year),end=max(tab$year))
 pop = pop[c("iso3c","year","SP.POP.1317.TO.UN")]
 names(pop) = c("ISO_A3","pop_year","pop")
-regions = read_csv("unsd_regions.csv")
-regions = regions[c("ISO-alpha3 Code","Region Name","Sub-region Name")]
-setnames(regions,"ISO-alpha3 Code","ISO_A3")
-setnames(regions,"Region Name","region")
-setnames(regions,"Sub-region Name","subregion")
+regions = read_csv("unsd_regions_simple.csv")
+regions = regions[c("ISO_A3","region","subregion")]
+regions$region[which(regions$region=="Latin America and the Caribbean")] = "LAC"
 
 #Curacao and Tuvalu drop out due to no data
 tab$pop_year = tab$year
@@ -338,6 +336,7 @@ tab$pop_year[which(tab$ISO_A3=="ATG")] = 2006
 
 tab = merge(tab,pop,by=c("ISO_A3","pop_year"))
 tab = merge(tab,regions,by="ISO_A3")
+tab = subset(tab,!is.na(pop))
 
 by_region = tab[,.(
   n = sum(!is.na(country))
@@ -389,10 +388,64 @@ by_region = tab[,.(
   ,mean.always.or.mostly.hand.wash.after.toilet.female = weighted.mean(always.or.mostly.hand.wash.after.toilet.female,pop,na.rm=T)
   ,mean.never.or.rarely.hand.wash.before.eating.female = weighted.mean(never.or.rarely.hand.wash.before.eating.female,pop,na.rm=T)
   ,mean.always.or.mostly.hand.wash.before.eating.female = weighted.mean(always.or.mostly.hand.wash.before.eating.female,pop,na.rm=T)
-),by=.(region,subregion)]
+),by=.(region)]
 by_region = subset(by_region,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
 
+by_subregion = tab[,.(
+  n = sum(!is.na(country))
+  ,mean.no.fruit = weighted.mean(no.fruit,pop,na.rm=T)
+  ,mean.daily.fruit = weighted.mean(daily.fruit,pop,na.rm=T)
+  ,mean.no.veg = weighted.mean(no.veg,pop,na.rm=T)
+  ,mean.daily.veg = weighted.mean(daily.veg,pop,na.rm=T)
+  ,mean.no.soda = weighted.mean(no.soda,pop,na.rm=T)
+  ,mean.daily.soda = weighted.mean(daily.soda,pop,na.rm=T)
+  ,mean.no.fastfood = weighted.mean(no.fastfood,pop,na.rm=T)
+  ,mean.daily.fastfood = weighted.mean(daily.fastfood,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry = weighted.mean(never.or.rarely.hungry,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry = weighted.mean(always.or.mostly.hungry,pop,na.rm=T)
+  ,mean.never.or.rarely.soap = weighted.mean(never.or.rarely.soap,pop,na.rm=T)
+  ,mean.always.or.mostly.soap = weighted.mean(always.or.mostly.soap,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet = weighted.mean(never.or.rarely.hand.wash.after.toilet,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet = weighted.mean(always.or.mostly.hand.wash.after.toilet,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating = weighted.mean(never.or.rarely.hand.wash.before.eating,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating = weighted.mean(always.or.mostly.hand.wash.before.eating,pop,na.rm=T)
+  ,mean.no.fruit.male = weighted.mean(no.fruit.male,pop,na.rm=T)
+  ,mean.daily.fruit.male = weighted.mean(daily.fruit.male,pop,na.rm=T)
+  ,mean.no.veg.male = weighted.mean(no.veg.male,pop,na.rm=T)
+  ,mean.daily.veg.male = weighted.mean(daily.veg.male,pop,na.rm=T)
+  ,mean.no.soda.male = weighted.mean(no.soda.male,pop,na.rm=T)
+  ,mean.daily.soda.male = weighted.mean(daily.soda.male,pop,na.rm=T)
+  ,mean.no.fastfood.male = weighted.mean(no.fastfood.male,pop,na.rm=T)
+  ,mean.daily.fastfood.male = weighted.mean(daily.fastfood.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry.male = weighted.mean(never.or.rarely.hungry.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry.male = weighted.mean(always.or.mostly.hungry.male,pop,na.rm=T)
+  ,mean.never.or.rarely.soap.male = weighted.mean(never.or.rarely.soap.male,pop,na.rm=T)
+  ,mean.always.or.mostly.soap.male = weighted.mean(always.or.mostly.soap.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet.male = weighted.mean(never.or.rarely.hand.wash.after.toilet.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet.male = weighted.mean(always.or.mostly.hand.wash.after.toilet.male,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating.male = weighted.mean(never.or.rarely.hand.wash.before.eating.male,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating.male = weighted.mean(always.or.mostly.hand.wash.before.eating.male,pop,na.rm=T)
+  ,mean.no.fruit.female = weighted.mean(no.fruit.female,pop,na.rm=T)
+  ,mean.daily.fruit.female = weighted.mean(daily.fruit.female,pop,na.rm=T)
+  ,mean.no.veg.female = weighted.mean(no.veg.female,pop,na.rm=T)
+  ,mean.daily.veg.female = weighted.mean(daily.veg.female,pop,na.rm=T)
+  ,mean.no.soda.female = weighted.mean(no.soda.female,pop,na.rm=T)
+  ,mean.daily.soda.female = weighted.mean(daily.soda.female,pop,na.rm=T)
+  ,mean.no.fastfood.female = weighted.mean(no.fastfood.female,pop,na.rm=T)
+  ,mean.daily.fastfood.female = weighted.mean(daily.fastfood.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hungry.female = weighted.mean(never.or.rarely.hungry.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hungry.female = weighted.mean(always.or.mostly.hungry.female,pop,na.rm=T)
+  ,mean.never.or.rarely.soap.female = weighted.mean(never.or.rarely.soap.female,pop,na.rm=T)
+  ,mean.always.or.mostly.soap.female = weighted.mean(always.or.mostly.soap.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.after.toilet.female = weighted.mean(never.or.rarely.hand.wash.after.toilet.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.after.toilet.female = weighted.mean(always.or.mostly.hand.wash.after.toilet.female,pop,na.rm=T)
+  ,mean.never.or.rarely.hand.wash.before.eating.female = weighted.mean(never.or.rarely.hand.wash.before.eating.female,pop,na.rm=T)
+  ,mean.always.or.mostly.hand.wash.before.eating.female = weighted.mean(always.or.mostly.hand.wash.before.eating.female,pop,na.rm=T)
+),by=.(region,subregion)]
+by_subregion = subset(by_subregion,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
+
 write_csv(by_region,"gshs_by_region.csv",na="")
+write_csv(by_region,"gshs_by_subregion.csv",na="")
 
 titleize = function(x){
   split = strsplit(x,".",fixed=T)[[1]]
@@ -451,8 +504,20 @@ vars = c(
 )
 setwd("~/GNR/plots")
 for(var in vars){
-  tmp = subset(by_region,!is.nan(get(var)))
-  p = ggplot(tmp,aes(x=subregion,y=get(var),fill=region)) +
+  tmp1 = subset(by_region,!is.nan(get(var)))
+  p1 = ggplot(tmp1,aes(x=region,y=get(var),fill=region)) +
+    geom_bar(stat="identity") +
+    scale_y_continuous(labels = scales::percent) +
+    # facet_grid(. ~ region, space="free_x", scales="free_x", switch="x") +
+    theme_classic() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+          strip.placement = "outside",
+          strip.background = element_rect(fill=NA, colour="grey50"),
+          panel.spacing.x=unit(0,"cm")) +
+    labs(x="", y=titleize(var)) +
+    guides(fill=F)
+  tmp2 = subset(by_subregion,!is.nan(get(var)))
+  p2 = ggplot(tmp2,aes(x=subregion,y=get(var),fill=region)) +
     geom_bar(stat="identity") +
     scale_y_continuous(labels = scales::percent) +
     facet_grid(. ~ region, space="free_x", scales="free_x", switch="x") +
@@ -463,5 +528,6 @@ for(var in vars){
           panel.spacing.x=unit(0,"cm")) +
     labs(x="", y=titleize(var)) +
     guides(fill=F)
-  ggsave(paste0(var,".jpg"),p)
+  ggsave(paste0(var,"_region.jpg"),p1)
+  ggsave(paste0(var,"_subregion.jpg"),p2)
 }
