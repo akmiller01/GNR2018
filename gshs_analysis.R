@@ -320,9 +320,11 @@ tab$year = unfactor(tab$year)
 pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year),end=max(tab$year))
 pop = pop[c("iso3c","year","SP.POP.1317.TO.UN")]
 names(pop) = c("ISO_A3","pop_year","pop")
-regions = read_csv("regions.csv")
-regions = regions[c("iso_3","region","subregion")]
-setnames(regions,"iso_3","ISO_A3")
+regions = read_csv("unsd_regions.csv")
+regions = regions[c("ISO-alpha3 Code","Region Name","Sub-region Name")]
+setnames(regions,"ISO-alpha3 Code","ISO_A3")
+setnames(regions,"Region Name","region")
+setnames(regions,"Sub-region Name","subregion")
 
 #Curacao and Tuvalu drop out due to no data
 tab$pop_year = tab$year
