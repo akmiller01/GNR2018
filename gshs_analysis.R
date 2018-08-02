@@ -35,6 +35,13 @@ gshs$no.fruit.and.no.veg = as.integer(gshs$no.fruit & gshs$no.veg)
 gshs$not.daily.fruit.and.not.daily.veg = as.integer(gshs$not.daily.fruit & gshs$not.daily.veg)
 gshs$daily.fruit.and.daily.veg = as.integer(gshs$daily.fruit & gshs$daily.veg)
 
+gshs$fruit.servings = gshs$fruit-2
+gshs$fruit.servings[which(gshs$fruit.servings<0)] = 0
+gshs$veg.servings = gshs$veg-2
+gshs$veg.servings[which(gshs$veg.servings<0)] = 0
+gshs$fruit.or.veg.servings = rowSums(gshs[,c("fruit.servings","veg.servings"),with=F],na.rm=T)
+gshs$five.a.day = as.integer(gshs$fruit.or.veg.servings>=5)
+
 gshs$fastfood = NA
 gshs$fastfood[which(gshs$filename %in% fastfood_files)] = gshs$Q10[which(gshs$filename %in% fastfood_files)]
 gshs$no.fastfood = as.integer(gshs$fastfood==1)
@@ -86,6 +93,11 @@ for(ctry in countries){
   dat = subset(gshs,country==ctry)
   year = unique(dat$year)
   dsn = svydesign(ids = ~1, data = dat, weights = ~WEIGHT)
+  if(sum(!is.na(dat$five.a.day))>0){
+    five.a.day = svymean(~five.a.day,design=dsn,na.rm=T)[1]
+  }else{
+    five.a.day = NA
+  }
   if(sum(!is.na(dat$fruit))>0){
     no.fruit = svymean(~no.fruit, design = dsn,na.rm=T)[1]
     not.daily.fruit = svymean(~not.daily.fruit, design = dsn,na.rm=T)[1]
@@ -159,6 +171,11 @@ for(ctry in countries){
   #Male
   dat.male = subset(dat,sex=="Male")
   dsn.male = svydesign(ids = ~1, data = dat.male, weights = ~WEIGHT)
+  if(sum(!is.na(dat.male$five.a.day))>0){
+    five.a.day.male = svymean(~five.a.day,design=dsn.male,na.rm=T)[1]
+  }else{
+    five.a.day.male = NA
+  }
   if(sum(!is.na(dat.male$fruit))>0){
     no.fruit.male = svymean(~no.fruit, design = dsn.male,na.rm=T)[1]
     not.daily.fruit.male = svymean(~not.daily.fruit, design = dsn.male,na.rm=T)[1]
@@ -232,6 +249,11 @@ for(ctry in countries){
   #Female
   dat.female = subset(dat,sex=="Female")
   dsn.female = svydesign(ids = ~1, data = dat.female, weights = ~WEIGHT)
+  if(sum(!is.na(dat.male$five.a.day))>0){
+    five.a.day.female = svymean(~five.a.day,design=dsn.female,na.rm=T)[1]
+  }else{
+    five.a.day.female = NA
+  }
   if(sum(!is.na(dat.female$fruit))>0){
     no.fruit.female = svymean(~no.fruit, design = dsn.female,na.rm=T)[1]
     not.daily.fruit.female = svymean(~not.daily.fruit, design = dsn.female,na.rm=T)[1]
@@ -304,6 +326,7 @@ for(ctry in countries){
   
   df = data.frame(country=ctry,
                   year,
+                  five.a.day,
                   no.fruit,
                   not.daily.fruit,
                   daily.fruit,
@@ -325,6 +348,7 @@ for(ctry in countries){
                   always.or.mostly.hand.wash.after.toilet,
                   never.or.rarely.hand.wash.before.eating,
                   always.or.mostly.hand.wash.before.eating,
+                  five.a.day.male,
                   no.fruit.male,
                   not.daily.fruit.male,
                   daily.fruit.male,
@@ -346,6 +370,7 @@ for(ctry in countries){
                   always.or.mostly.hand.wash.after.toilet.male,
                   never.or.rarely.hand.wash.before.eating.male,
                   always.or.mostly.hand.wash.before.eating.male,
+                  five.a.day.female,
                   no.fruit.female,
                   not.daily.fruit.female,
                   daily.fruit.female,
@@ -402,6 +427,9 @@ tab = subset(tab,!is.na(pop))
 
 global = tab[,.(
   n = sum(!is.na(country))
+  ,mean.five.a.day = weighted.mean(five.a.day,pop,na.rm=T)
+  ,mean.five.a.day.male = weighted.mean(five.a.day.male,pop,na.rm=T)
+  ,mean.five.a.day.female = weighted.mean(five.a.day.female,pop,na.rm=T)
   ,mean.no.fruit = weighted.mean(no.fruit,pop,na.rm=T)
   ,mean.not.daily.fruit = weighted.mean(not.daily.fruit,pop,na.rm=T)
   ,mean.daily.fruit = weighted.mean(daily.fruit,pop,na.rm=T)
@@ -469,6 +497,9 @@ global = tab[,.(
 
 by_region = tab[,.(
   n = sum(!is.na(country))
+  ,mean.five.a.day = weighted.mean(five.a.day,pop,na.rm=T)
+  ,mean.five.a.day.male = weighted.mean(five.a.day.male,pop,na.rm=T)
+  ,mean.five.a.day.female = weighted.mean(five.a.day.female,pop,na.rm=T)
   ,mean.no.fruit = weighted.mean(no.fruit,pop,na.rm=T)
   ,mean.not.daily.fruit = weighted.mean(not.daily.fruit,pop,na.rm=T)
   ,mean.daily.fruit = weighted.mean(daily.fruit,pop,na.rm=T)
@@ -537,6 +568,9 @@ by_region = subset(by_region,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
 
 by_subregion = tab[,.(
   n = sum(!is.na(country))
+  ,mean.five.a.day = weighted.mean(five.a.day,pop,na.rm=T)
+  ,mean.five.a.day.male = weighted.mean(five.a.day.male,pop,na.rm=T)
+  ,mean.five.a.day.female = weighted.mean(five.a.day.female,pop,na.rm=T)
   ,mean.no.fruit = weighted.mean(no.fruit,pop,na.rm=T)
   ,mean.not.daily.fruit = weighted.mean(not.daily.fruit,pop,na.rm=T)
   ,mean.daily.fruit = weighted.mean(daily.fruit,pop,na.rm=T)
@@ -613,7 +647,10 @@ titleize = function(x){
 }
 
 vars = c(
-  "mean.no.fruit"
+  "mean.five.a.day"
+  ,"mean.five.a.day.male"
+  ,"mean.five.a.day.female"
+  ,"mean.no.fruit"
   ,"mean.not.daily.fruit"
   ,"mean.daily.fruit"
   ,"mean.no.veg"
