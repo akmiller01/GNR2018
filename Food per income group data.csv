@@ -31,10 +31,10 @@ High income,Omega 3,0.3169306,0.25,g,1
 Low income,Omega 3,0.0141357,0.25,g,1
 Lower-middle,Omega 3,0.0234596,0.25,g,1
 Upper-middle,Omega 3,0.0551125,0.25,g,1
-High income,Polyunsaturated Fat,0.0665308,0.11,%E,2
-Low income,Polyunsaturated Fat,0.0366882,0.11,%E,2
-Lower-middle,Polyunsaturated Fat,0.0273304,0.11,%E,2
-Upper-middle,Polyunsaturated Fat,0.0630166,0.11,%E,2
+High income,Polyunsaturated Fat,6.65308,11,%,2
+Low income,Polyunsaturated Fat,3.66882,11,%,2
+Lower-middle,Polyunsaturated Fat,2.73304,11,%,2
+Upper-middle,Polyunsaturated Fat,6.30166,11,%,2
 High income,Poultry,36.30967,29,g,1
 Low income,Poultry,2.486023,29,g,1
 Lower-middle,Poultry,6.648867,29,g,1
@@ -51,10 +51,10 @@ High income,Refined Grain,169.5309,107,g,2
 Low income,Refined Grain,109.2064,107,g,2
 Lower-middle,Refined Grain,126.522,107,g,2
 Upper-middle,Refined Grain,112.4891,107,g,2
-High income,Saturated Fat,0.0895878,0.07,%E,2
-Low income,Saturated Fat,0.0644405,0.07,%E,2
-Lower-middle,Saturated Fat,0.0667246,0.07,%E,2
-Upper-middle,Saturated Fat,0.0735875,0.07,%E,2
+High income,Saturated Fat,8.95878,7,%,2
+Low income,Saturated Fat,6.44405,7,%,2
+Lower-middle,Saturated Fat,6.67246,7,%,2
+Upper-middle,Saturated Fat,7.35875,7,%,2
 High income,Sodium,4.469424,3,g,2
 Low income,Sodium,3.066931,3,g,2
 Lower-middle,Sodium,4.438446,3,g,2
@@ -75,10 +75,10 @@ High income,Total Sugar,78.78259,31,g,2
 Low income,Total Sugar,23.76211,31,g,2
 Lower-middle,Total Sugar,46.77402,31,g,2
 Upper-middle,Total Sugar,51.17641,31,g,2
-High income,Trans Fat,0.0061174,0.005,%E,2
-Low income,Trans Fat,0.0026803,0.005,%E,2
-Lower-middle,Trans Fat,0.0061461,0.005,%E,2
-Upper-middle,Trans Fat,0.0038128,0.005,%E,2
+High income,Trans Fat,0.61174,0.5,%,2
+Low income,Trans Fat,0.26803,0.5,%,2
+Lower-middle,Trans Fat,0.61461,0.5,%,2
+Upper-middle,Trans Fat,0.38128,0.5,%,2
 High income,Veg,183.0241,360,g,2
 Low income,Veg,71.24715,360,g,2
 Lower-middle,Veg,173.7298,360,g,2
