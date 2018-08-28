@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table","ggplot2","wesanderson")
+list.of.packages <- c("data.table","ggplot2")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -57,7 +57,6 @@ for(i in 1:2){
     geom_point(aes(y=percent),alpha=0.8,size=3) +
     geom_text(aes(y=1,label=paste(recommended,unit)),color="black",vjust=-1.3) +
     geom_text(data=subset(chart.data.sub,outlier==1),aes(y=percent,label=round(value)),color="black",size=2) +
-    scale_color_manual(values=wes_palette("Zissou1")) +
     coord_flip() +
     theme_classic() +
     theme(
