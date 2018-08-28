@@ -40,6 +40,8 @@ chart.data$outlier = 0
 chart.data$outlier[which(chart.data$percent>2)] = 1
 chart.data$percent[which(chart.data$percent>2)] = 2.1
 # Manual jitter
+chart.data$percent[which(chart.data$food=="Sodium" & chart.data$class=="High income")] = 2.2
+chart.data$percent[which(chart.data$food=="Sodium" & chart.data$class=="Upper-middle")] = 2.3
 chart.data$percent[which(chart.data$food=="Eggs" & chart.data$class=="High income")] = 2.2
 chart.data$percent[which(chart.data$food=="SSB")] = c(2.4, 2.1, 2.2, 2.3)
 
