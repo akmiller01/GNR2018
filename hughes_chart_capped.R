@@ -31,8 +31,16 @@ food.order = c(
   "Saturated Fat",
   "Trans Fat"
 )
-chart.data$food = factor(chart.data$food,levels=rev(food.order))
 chart.data$percent = chart.data$value/chart.data$recommended
+mean.tab = data.table(chart.data)[,.(mean_val=min(percent)),by=.(food)]
+mean.tab = mean.tab[order(-mean.tab$mean_val),]
+food.order = mean.tab$food
+chart.data = merge(chart.data,mean.tab,by="food",all.x=T)
+chart.data = chart.data[order(chart.data$mean_val),]
+# food.order = food.order[order(food.order)]
+# chart.data = chart.data[order(chart.data$food),]
+chart.data$column = c(rep(2,44),rep(1,44))
+chart.data$food = factor(chart.data$food,levels=rev(food.order))
 max.percent = min(max(chart.data$percent,na.rm=T),2)
 
 # Outliers
@@ -69,7 +77,7 @@ for(i in 1:2){
       legend.text = element_text(size=12)
     )
   
-  ggsave(paste0("recommended_values",i,"_final.png"),p,width=7.5,height=5)
+  ggsave(paste0("recommended_values",i,"_desc.png"),p,width=7.5,height=5)
 }
 
 
