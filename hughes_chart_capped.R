@@ -9,22 +9,22 @@ chart.data = read.csv("Food per income group data.csv")
 chart.data$class = factor(chart.data$class,levels=c("Low income", "Lower-middle", "Upper-middle","High income"))
 food.order = c(
   "Calcium",
-  "Eggs",
-  "Fish",
+  # "Eggs",
+  # "Fish",
   "Fruit",
   "Legumes",
   "Milk",
   "Nuts",
   "Omega 3",
-  "Poultry",
+  # "Poultry",
   "Processed Meat",
   "Red Meat",
-  "Refined Grain",
+  # "Refined Grain",
   "Sodium",
   "SSB",
-  "Starchy Veg",
-  "Total Dairy",
-  "Total Sugar",
+  # "Starchy Veg",
+  # "Total Dairy",
+  # "Total Sugar",
   "Veg",
   "Whole Grain",
   "Polyunsaturated Fat",
@@ -32,14 +32,15 @@ food.order = c(
   "Trans Fat"
 )
 chart.data$percent = chart.data$value/chart.data$recommended
-mean.tab = data.table(chart.data)[,.(mean_val=min(percent)),by=.(food)]
-mean.tab = mean.tab[order(-mean.tab$mean_val),]
-food.order = mean.tab$food
-chart.data = merge(chart.data,mean.tab,by="food",all.x=T)
-chart.data = chart.data[order(chart.data$mean_val),]
+# mean.tab = data.table(chart.data)[,.(mean_val=min(percent)),by=.(food)]
+# mean.tab = mean.tab[order(-mean.tab$mean_val),]
+# food.order = mean.tab$food
+# chart.data = merge(chart.data,mean.tab,by="food",all.x=T)
+chart.data = subset(chart.data, food %in% food.order)
+chart.data = chart.data[order(chart.data$food),]
 # food.order = food.order[order(food.order)]
 # chart.data = chart.data[order(chart.data$food),]
-chart.data$column = c(rep(2,44),rep(1,44))
+chart.data$column = c(rep(1,30),rep(1,30))
 chart.data$food = factor(chart.data$food,levels=rev(food.order))
 max.percent = min(max(chart.data$percent,na.rm=T),2)
 
@@ -56,7 +57,8 @@ chart.data$percent[which(chart.data$food=="SSB")] = c(2.4, 2.1, 2.2, 2.3)
 bar.dat = unique(chart.data[c("food","recommended","column")])
 bar.dat$class = "Low income"
 
-for(i in 1:2){
+# for(i in 1:2){
+i = 1
   chart.data.sub = subset(chart.data,column==i)
   bar.dat.sub = subset(bar.dat,column==i)
   p = ggplot(chart.data.sub,aes(x=food,colour=class)) +
@@ -77,7 +79,7 @@ for(i in 1:2){
       legend.text = element_text(size=12)
     )
   
-  ggsave(paste0("recommended_values",i,"_desc.png"),p,width=7.5,height=5)
-}
+  ggsave(paste0("recommended_values.png"),p,width=7.5,height=7.5)
+# }
 
 
