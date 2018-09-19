@@ -32,12 +32,12 @@ food.order = c(
   "Trans Fat"
 )
 chart.data$percent = chart.data$value/chart.data$recommended
-# mean.tab = data.table(chart.data)[,.(mean_val=min(percent)),by=.(food)]
-# mean.tab = mean.tab[order(-mean.tab$mean_val),]
-# food.order = mean.tab$food
-# chart.data = merge(chart.data,mean.tab,by="food",all.x=T)
 chart.data = subset(chart.data, food %in% food.order)
-chart.data = chart.data[order(chart.data$food),]
+mean.tab = data.table(chart.data)[,.(mean_val=mean(percent)),by=.(food)]
+mean.tab = mean.tab[order(-mean.tab$mean_val),]
+food.order = mean.tab$food
+chart.data = merge(chart.data,mean.tab,by="food",all.x=T)
+chart.data = chart.data[order(-chart.data$mean_val),]
 # food.order = food.order[order(food.order)]
 # chart.data = chart.data[order(chart.data$food),]
 chart.data$column = c(rep(1,30),rep(1,30))
