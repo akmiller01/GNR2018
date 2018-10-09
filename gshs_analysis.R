@@ -401,6 +401,9 @@ isos <- read_csv("gshs_isos.csv")
 tab <- merge(tab,isos,by="country")
 # write_csv(tab,"gshs_tab.csv")
 
+incomes = read.csv("incomes.csv")
+tab = merge(tab,incomes,by="ISO_A3",all=T)
+
 tab$year = unfactor(tab$year)
 
 pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year),end=max(tab$year))
