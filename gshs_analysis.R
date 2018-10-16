@@ -401,12 +401,12 @@ isos <- read_csv("gshs_isos.csv")
 tab <- merge(tab,isos,by="country")
 # write_csv(tab,"gshs_tab.csv")
 
-incomes = read.csv("incomes.csv")
-tab = merge(tab,incomes,by="ISO_A3",all=T)
+# incomes = read.csv("incomes.csv")
+# tab = merge(tab,incomes,by="ISO_A3",all=T)
 
 tab$year = unfactor(tab$year)
 
-pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year),end=max(tab$year))
+pop = WDI("SP.POP.1317.TO.UN",country="all",extra=T,start=min(tab$year,na.rm=T),end=max(tab$year,na.rm=T))
 pop = pop[c("iso3c","year","SP.POP.1317.TO.UN")]
 names(pop) = c("ISO_A3","pop_year","pop")
 regions = read_csv("unsd_regions_simple.csv")
@@ -566,6 +566,7 @@ by_region = tab[,.(
   ,mean.always.or.mostly.hand.wash.after.toilet.female = weighted.mean(always.or.mostly.hand.wash.after.toilet.female,pop,na.rm=T)
   ,mean.never.or.rarely.hand.wash.before.eating.female = weighted.mean(never.or.rarely.hand.wash.before.eating.female,pop,na.rm=T)
   ,mean.always.or.mostly.hand.wash.before.eating.female = weighted.mean(always.or.mostly.hand.wash.before.eating.female,pop,na.rm=T)
+  ,included.countries = paste(country, collapse=", ")
 ),by=.(region)]
 by_region = subset(by_region,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
 
@@ -637,6 +638,7 @@ by_subregion = tab[,.(
   ,mean.always.or.mostly.hand.wash.after.toilet.female = weighted.mean(always.or.mostly.hand.wash.after.toilet.female,pop,na.rm=T)
   ,mean.never.or.rarely.hand.wash.before.eating.female = weighted.mean(never.or.rarely.hand.wash.before.eating.female,pop,na.rm=T)
   ,mean.always.or.mostly.hand.wash.before.eating.female = weighted.mean(always.or.mostly.hand.wash.before.eating.female,pop,na.rm=T)
+  ,included.countries = paste(country, collapse=", ")
 ),by=.(region,subregion)]
 by_subregion = subset(by_subregion,!is.nan(mean.no.fruit) & !is.na(mean.no.fruit))
 
