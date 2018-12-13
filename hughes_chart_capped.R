@@ -26,7 +26,7 @@ food.order = c(
   # "Total Dairy",
   # "Total Sugar",
   "Veg",
-  "Whole Grain",
+  "Grain",
   "Polyunsaturated Fat",
   "Saturated Fat",
   "Trans Fat"
